@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: cadetblue;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.6rem;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+.navbaarlink:link,
+.navbaarlink:visited {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navbaarlink:hover {
+    text-decoration: underline gray 4px solid;
+
+}
+
+.btn {
+    display: none;
+}
+
+.menubtn {
+    width: 2rem;
+    height: 2rem;
+}
+
+.btn [name="close"] {
+    display: none;
+    width: 2rem;
+    height: 2rem;
+}
+
+@media (max-width:38em) {
+    .header.logo {
+        width: 1rem;
+
+    }
+
+    .btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .navbaar {
+        width: 100%;
+        height: 100vh;
+        background-color: grey;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+    }
+
+    .navbaar ul {
+        flex-direction: column;
+    }
+
+    .navbaar ul li {
+        align-self: center;
+        font-size: 1rem;
+    }
+
+    .active .navbaar {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .active .closebtn[name="close"] {
+        display: block;
+        z-index: 999;
+    }
+
+    .active .menubtn[name="menu"] {
+        display: none;
+    }
+
+}
+.home-section,.service-section{
+    background-color: whitesmoke;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
